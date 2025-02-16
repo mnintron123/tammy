@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colorful Bar Chart</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f3f4f6;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #4b4b4b;
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+    .container {
+      max-width: 1000px;  
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+    }
+    canvas {
+      display: block;
+      margin: 0 auto;
+      width: 100% !important; 
+      height: 500px !important; 
+    }
+  </style>
+</head>
+<body>
+
+  <h1>กราฟแท่ง</h1>
+
+  <div class="container">
+    <canvas id="colorfulBarChart"></canvas>
+  </div>
+
+  <script>
+    var ctx = document.getElementById('colorfulBarChart').getContext('2d');
+    var colorfulBarChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['แท่ง 1', 'แท่ง 2', 'แท่ง 3', 'แท่ง 4', 'แท่ง 5', 'แท่ง 6', 'แท่ง 7'],
+        datasets: [{
+          label: 'ค่าของแต่ละแท่ง',
+          data: [12, 19, 3, 5, 2, 3, 15], 
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.6)',   
+            'rgba(54, 162, 235, 0.6)',   
+            'rgba(255, 206, 86, 0.6)',   
+            'rgba(75, 192, 192, 0.6)',   
+            'rgba(153, 102, 255, 0.6)',  
+            'rgba(255, 159, 64, 0.6)',   
+            'rgba(255, 99, 132, 0.6)'  
+          ],
+          borderColor: [
+            'rgba(255, 99, 132, 1)',   
+            'rgba(54, 162, 235, 1)',    
+            'rgba(255, 206, 86, 1)',     
+            'rgba(75, 192, 192, 1)',     
+            'rgba(153, 102, 255, 1)',    
+            'rgba(255, 159, 64, 1)',     
+            'rgba(255, 99, 132, 1)'     
+          ],
+          borderWidth: 2
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: false 
+          },
+          tooltip: {
+            backgroundColor: '#333',
+            titleColor: '#fff',
+            bodyColor: '#fff',
+            borderColor: 'rgba(255, 255, 255, 0.2)',
+            borderWidth: 1
+          }
+        },
+        scales: {
+          x: {
+            beginAtZero: true,
+            grid: {
+              display: false
+            }
+          },
+          y: {
+            beginAtZero: true,
+            grid: {
+              color: '#e0e0e0'
+            },
+            ticks: {
+              color: '#555'
+            }
+          }
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>

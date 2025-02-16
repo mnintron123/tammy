@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สุนัขที่นิยมในไทย</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d18d8d;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgb(255, 253, 137);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .dog-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgb(139, 219, 233);
+            padding-bottom: 20px;
+        }
+        .dog-info img {
+            width: 200px;
+            height: 200px;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+        .dog-info h2 {
+            color: #4CAF50;
+            margin: 0;
+        }
+        .dog-info p {
+            font-size: 16px;
+            color: #555;
+        }
+        select {
+            padding: 10px;
+            font-size: 16px;
+            margin: 20px 0;
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid rgb(215, 174, 243);
+        }
+        .dog-details {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>สุนัขที่นิยมในประเทศไทย</h1>
+
+        <label for="dog-select">เลือกพันธุ์สุนัข:</label>
+        <select id="dog-select">
+            <option value="">-- เลือกพันธุ์สุนัข --</option>
+            <option value="chihuahua">ชิวาวา</option>
+            <option value="pomeranian">ปอมเมอเรเนียน</option>
+            <option value="beagle">บีเกิ้ล</option>
+            <option value="Siberian Husky">ไซบีเรียน</option>
+            <option value="Labrador Retriever">ลาบราดอร์</option>
+            <option value="Thai Ridgeback">ไทยหลังอาน</option>
+        </select>
+
+        <div id="chihuahua" class="dog-details">
+            <div class="dog-info">
+                <img src="1.jpg" alt="ชิวาวา">
+                <div>
+                    <h2>ชิวาวา</h2>
+                    <p><strong>ขนาด:</strong> เล็ก</p>
+                    <p><strong>อายุขัย:</strong> 12-20 ปี</p>
+                    <p><strong>บุคลิกภาพ:</strong> กล้าหาญ, รักเจ้าของ, ขี้เล่น</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="pomeranian" class="dog-details">
+            <div class="dog-info">
+                <img src="2.jpg" alt="ปอมเมอเรเนียน">
+                <div>
+                    <h2>ปอมเมอเรเนียน</h2>
+                    <p><strong>ขนาด:</strong> เล็ก</p>
+                    <p><strong>อายุขัย:</strong> 12-16 ปี</p>
+                    <p><strong>บุคลิกภาพ:</strong> ขี้เล่น, สง่างาม, ร่าเริง</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="beagle" class="dog-details">
+            <div class="dog-info">
+                <img src="3.jpg" alt="บีเกิ้ล">
+                <div>
+                    <h2>บีเกิ้ล</h2>
+                    <p><strong>ขนาด:</strong> กลาง</p>
+                    <p><strong>อายุขัย:</strong> 12-15 ปี</p>
+                    <p><strong>บุคลิกภาพ:</strong> ขี้เล่น, ฉลาด, ชอบการผจญภัย</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Siberian Husky" class="dog-details">
+        <div class="dog-info">
+            <img src="4.jpg" alt="ไซบีเรียน">
+            <div>
+                <h2>ไซบีเรียน</h2>
+                <p><strong>ขนาด:</strong> ใหญ่</p>
+                <p><strong>อายุขัย:</strong> 12-15 ปี</p>
+                <p><strong>บุคลิกภาพ:</strong> เป็นมิตร เข้ากับคนง่าย เป็นสุนัขที่ชอบการอยู่เป็นฝูงซึ่งเข้ากับคนและสุนัขตัวอื่นๆ
+                     ได้ดี มีความสามารถในการล่าเหยื่อ</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="Labrador Retriever" class="dog-details">
+        <div class="dog-info">
+            <img src="5.jpg" alt="ลาบราดอร์">
+            <div>
+                <h2>ลาบราดอร์</h2>
+                <p><strong>ขนาด:</strong> ใหญ่</p>
+                <p><strong>อายุขัย:</strong> 10-12 ปี</p>
+                <p><strong>บุคลิกภาพ:</strong> เป็นมิตร เข้ากับคนง่าย ฉลาด</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="Thai Ridgeback" class="dog-details">
+        <div class="dog-info">
+            <img src="6.jpg" alt="ไทยหลังอาน">
+            <div>
+                <h2>ไทยหลังอาน</h2>
+                <p><strong>ขนาด:</strong> ใหญ่</p>
+                <p><strong>อายุขัย:</strong> 12-13 ปี</p>
+                <p><strong>บุคลิกภาพ:</strong> รักอิสระ เฉลียวฉลาด
+                     มีความจงรักภักดี เป็นสุนัขเฝ้าบ้านที่ดี</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        
+        const selectElement = document.getElementById('dog-select');
+        const dogDetails = document.querySelectorAll('.dog-details');
+
+        selectElement.addEventListener('change', function() {
+        
+            dogDetails.forEach(function(detail) {
+                detail.style.display = 'none';
+            });
+
+            
+            const selectedDog = selectElement.value;
+            if (selectedDog) {
+                document.getElementById(selectedDog).style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>กราฟความนิยมของสุนัขในไทย</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #d3dd7c;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            background: rgb(133, 211, 235);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        canvas {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>กราฟแสดงความนิยมของสุนัขในไทย</h1>
+        <canvas id="popularityChart"></canvas>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('popularityChart').getContext('2d');
+
+        const dogBreeds = ["ชิวาวา", "ปอมเมอเรเนียน", "บีเกิ้ล", "ไซบีเรียน ฮัสกี", 
+                           "ลาบราดอร์", "ไทยหลังอาน"];
+        const popularity = [30, 25, 20, 15, 10, 8]; // คะแนนความนิยม (%)
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: dogBreeds,
+                datasets: [{
+                    label: 'ความนิยม (%)',
+                    data: popularity,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.6)', 'rgba(54, 162, 235, 0.6)',
+                        'rgba(255, 206, 86, 0.6)', 'rgba(75, 192, 192, 0.6)',
+                        'rgba(153, 102, 255, 0.6)', 'rgba(255, 159, 64, 0.6)'
+                    ],
+                    borderColor: 'rgba(0, 0, 0, 0.8)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 40
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
